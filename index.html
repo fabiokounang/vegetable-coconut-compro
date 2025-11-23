@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshLeaf - Nature’s Harvest, Fresh Every Day</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-stone-50">
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
+    <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-lg">
+            <span class="text-white text-2xl">🌿</span>
+          </div>
+          <div>
+            <h1 id="header-company-name" data-lang="header-company" class="text-2xl font-bold text-gray-800">FreshLeaf</h1>
+            <p id="header-tagline" data-lang="header-tagline" class="text-xs text-gray-500">Nature’s Harvest, Fresh Every Day</p>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a data-lang="nav-home" href="#home" class="nav-link text-gray-700 hover:text-green-600 font-medium">Home</a>
+          <a data-lang="nav-about" href="#about" class="nav-link text-gray-700 hover:text-green-600 font-medium">About Us</a>
+          <a data-lang="nav-services" href="#services" class="nav-link text-gray-700 hover:text-green-600 font-medium">Services</a>
+          <a data-lang="nav-products" href="#products" class="nav-link text-gray-700 hover:text-green-600 font-medium">Products</a>
+          <a data-lang="nav-location" href="#location" class="nav-link text-gray-700 hover:text-green-600 font-medium">Location</a>
+          <a data-lang="nav-contact" href="#contact" class="nav-link text-gray-700 hover:text-green-600 font-medium">Contact</a>
+        </div>
+        <div class="hidden lg:flex items-center gap-4">
+          <!-- <button onclick="scrollToContact()" class="btn-primary text-white px-6 py-3 rounded-full font-semibold shadow-lg"> <span data-lang="contact-button">Contact Us</span> 
+          </button> -->
+          <div class="flex items-center gap-2 bg-gray-100 rounded-full p-1">
+            <!-- <button onclick="changeLanguage('id')" id="lang-id" class="px-4 py-2 rounded-full font-semibold transition-all bg-gradient-to-r from-green-500 to-green-600 text-white shadow-md"> ID </button>  -->
+            <button onclick="changeLanguage('en')" id="lang-en" class="px-4 py-2 rounded-full font-semibold transition-all text-gray-600 bg-gradient-to-r from-green-500 to-green-600 text-white shadow-md"> EN </button> 
+            <button onclick="changeLanguage('zh')" id="lang-zh" class="px-4 py-2 rounded-full font-semibold transition-all text-gray-600"> 中文 </button>
+          </div>
+      </div>
+      <button id="mobile-menu-btn" class="lg:hidden text-gray-700 p-2">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+    </div>
+    
+    <div id="mobile-menu" class="hidden lg:hidden pb-4">
+     <div class="flex flex-col gap-3">
+      <a data-lang="nav-home" href="#home" class="text-gray-700 hover:text-green-600 py-2 font-medium">Home</a> 
+      <a data-lang="nav-about" href="#about" class="text-gray-700 hover:text-green-600 py-2 font-medium">About Us</a> 
+      <a data-lang="nav-services" href="#services" class="text-gray-700 hover:text-green-600 py-2 font-medium">Services</a> 
+      <a data-lang="nav-products" href="#products" class="text-gray-700 hover:text-green-600 py-2 font-medium">Products</a> 
+      <a data-lang="nav-location" href="#location" class="text-gray-700 hover:text-green-600 py-2 font-medium">Location</a> 
+      <a data-lang="nav-contact" href="#contact" class="text-gray-700 hover:text-green-600 py-2 font-medium">Contact</a> 
+      <button onclick="scrollToContact()" class="btn-primary text-white px-6 py-3 rounded-full font-semibold mt-2"> Hubungi Kami </button>
+      <div class="flex items-center gap-2 bg-gray-100 rounded-full p-1 mb-2">
+        <!-- <button onclick="changeLanguage('id')" id="lang-id-mobile" class="flex-1 py-2 rounded-full font-semibold transition-all bg-gradient-to-r from-green-500 to-green-600 text-white shadow-md text-sm"> ID </button>  -->
+        <button onclick="changeLanguage('en')" id="lang-en-mobile" class="flex-1 py-2 rounded-full font-semibold transition-all text-gray-600 bg-gradient-to-r from-green-500 to-green-600 text-white shadow-md text-sm"> EN </button> 
+        <button onclick="changeLanguage('zh')" id="lang-zh-mobile" class="flex-1 py-2 rounded-full font-semibold transition-all text-gray-600 text-sm"> 中文 </button>
+        <button onclick="scrollToContact()" class="hidden lg:block btn-primary text-white px-6 py-3 rounded-full font-semibold shadow-lg"> Contact Us
+        </button> 
+        <!-- <button id="mobile-menu-btn" class="lg:hidden text-gray-700 p-2">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button> -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Carousel -->
+  <section id="home" class="mt-20 carousel-container">
+    <div class="carousel-track">
+      <!-- Slide 1 -->
+      <div class="carousel-slide gradient-bg min-h-[600px] flex items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="hero-text-animate">
+              <h2 data-lang="hero-headline-1" id="hero-headline-1" class="text-4xl lg:text-6xl font-bold text-gray-800 mb-4 leading-tight">
+                Fresh Vegetables, Stored in Cooling Facilities
+              </h2>
+              <p data-lang="hero-subtext-2" id="hero-subtext-1" class="text-lg lg:text-xl text-gray-600 mb-8">
+                All our vegetables are freshly harvested and stored in a temperature-controlled facility to maintain maximum freshness.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="scrollToProducts()" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg" data-lang="view-our-products"> View Our Products </button> 
+                <button onclick="scrollToContact()" class="btn-secondary border-2 border-green-600 text-green-600 px-8 py-4 rounded-full font-semibold text-lg" data-lang="contact-button">Contact Us</button>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <div class="w-full max-w-md h-80 rounded-3xl overflow-hidden shadow-2xl"><img src="images/image1.jpeg"
+                  alt="Sayuran segar" class="w-full h-full object-cover"
+                  onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="carousel-slide bg-gradient-to-br from-emerald-50 to-green-50 min-h-[600px] flex items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="hero-text-animate">
+              <h2 data-lang="hero-headline-2" id="hero-headline-2" class="text-4xl lg:text-6xl font-bold text-gray-800 mb-4 leading-tight">Daily Harvest, Direct From Local Farmers</h2>
+              <p data-lang="hero-subtext-2" id="hero-subtext-2" class="text-lg lg:text-xl text-gray-600 mb-8">Supporting local farmers and sustainable agriculture. Every purchase helps nourish families and strengthen communities.</p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="scrollToProducts()" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg" data-lang="view-our-products"> View Our Products </button> 
+                <button onclick="scrollToContact()" class="btn-secondary border-2 border-green-600 text-green-600 px-8 py-4 rounded-full font-semibold text-lg" data-lang="contact-button">Contact Us</button>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <div class="w-full max-w-md h-80 rounded-3xl overflow-hidden shadow-2xl"><img src="images/image2.jpeg"
+                  alt="Petani lokal di kebun" class="w-full h-full object-cover"
+                  onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="carousel-slide bg-gradient-to-br from-lime-50 to-yellow-50 min-h-[600px] flex items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="hero-text-animate">
+              <h2 data-lang="hero-headline-3" id="hero-headline-3" class="text-4xl lg:text-6xl font-bold text-gray-800 mb-4 leading-tight">Fresh Coconuts for All Your Needs</h2>
+              <p data-lang="hero-subtext-3" id="hero-subtext-3" class="text-lg lg:text-xl text-gray-600 mb-8">Our young and mature coconuts are carefully selected directly from farmers and stored properly to maintain their freshness. Perfect for beverages, cooking, and coconut milk preparation — delivered fresh to your home every day.</p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="scrollToProducts()" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg" data-lang="view-our-products"> View Our Products </button> 
+                <button onclick="scrollToContact()" class="btn-secondary border-2 border-green-600 text-green-600 px-8 py-4 rounded-full font-semibold text-lg" data-lang="contact-button">Contact Us</button>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <div class="w-full max-w-md h-80 rounded-3xl overflow-hidden shadow-2xl"><img src="images/image5.jpeg"
+                  alt="Bahan makanan segar" class="w-full h-full object-cover"
+                  onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><button class="carousel-arrow left" onclick="previousSlide()"> ← </button> <button
+      class="carousel-arrow right" onclick="nextSlide()"> → </button>
+    <div class="carousel-dots">
+      <div class="carousel-dot active" onclick="goToSlide(0)"></div>
+      <div class="carousel-dot" onclick="goToSlide(1)"></div>
+      <div class="carousel-dot" onclick="goToSlide(2)"></div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="slide-in-left">
+          <div class="w-full h-96 rounded-3xl overflow-hidden shadow-2xl"><img src="images/image10.png"
+              alt="Gudang sayuran FreshLeaf dengan stok lengkap" class="w-full h-full object-cover"
+              onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+          </div>
+        </div>
+        <div class="slide-in-right">
+          <h2 data-lang="about-us-title" class="section-title text-left">About FreshLeaf</h2>
+          <p data-lang="about-us-description-1" class="text-lg text-gray-600 mb-6 leading-relaxed">
+            <strong>FreshLeaf</strong> is a trusted distributor of <strong>vegetables</strong> and <strong>coconuts</strong>,
+            serving the needs of culinary businesses across Indonesia. We provide high-quality products with a stable supply
+            for restaurants, hotels, catering services, and other food-related enterprises.
+          </p>
+
+          <p data-lang="about-us-description-2" class="text-lg text-gray-600 mb-6 leading-relaxed">
+            With a spacious warehouse and an efficient logistics system, we are able to fulfill both large and small orders.
+            We work directly with selected local farmers to ensure daily freshness and consistent product quality.
+          </p>
+
+          <p data-lang="about-us-description-3" class="text-lg text-gray-600 mb-8 leading-relaxed">
+            Supported by a professional and experienced team, FreshLeaf is committed to providing the best service at competitive prices.
+            Customer trust is our top priority in every transaction.
+          </p>
+
+          <button data-lang="contact-button" onclick="scrollToContact()" class="btn-primary text-white px-8 py-4 rounded-full font-semibold shadow-lg"> Contact Us </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 gradient-bg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <h2 data-lang="service-title" class="section-title">Our Services</h2>
+        <p data-lang="service-subtitle" class="section-subtitle">Export solutions for fresh vegetables and coconuts for international buyers</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="service-card fade-in">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-4xl">🚚</span>
+          </div>
+          <h3 data-lang="service-title-1" class="text-xl font-bold text-gray-800 mb-3 text-center">International Shipping</h3>
+          <p data-lang="service-subtitle-2" class="text-gray-600 text-center">
+            Fast and secure delivery to Taiwan, Singapore, Malaysia, and Thailand with strict export standards.
+          </p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-4xl">🏪</span>
+          </div>
+          <h3 data-lang="service-title-2" class="text-xl font-bold text-gray-800 mb-3 text-center">Supplier for Importers</h3>
+          <p data-lang="service-subtitle-2" class="text-gray-600 text-center">Providing large-volume supplies of fresh vegetables and coconuts for overseas importers and distributors.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-4xl">📦</span>
+          </div>
+          <h3 data-lang="service-title-3" class="text-xl font-bold text-gray-800 mb-3 text-center">Quality Packaging</h3>
+          <p data-lang="service-subtitle-3" class="text-gray-600 text-center">
+            Professional packaging with cooling and export-grade standards to ensure the products stay fresh throughout the journey.
+          </p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-4xl">🎉</span>
+          </div>
+          <h3 data-lang="service-title-4" class="text-xl font-bold text-gray-800 mb-3 text-center">Custom Order</h3>
+          <p data-lang="service-subtitle-4" class="text-gray-600 text-center">
+            Serving special requests from international buyers based on the requirements of their destination country.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Products Section -->
+  <section id="products" class="py-16 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 fade-in">
+        <h2 data-lang="product-title" class="text-3xl font-bold text-gray-800 mb-4">Our Products</h2>
+        <p data-lang="product-subtitle" class="text-lg text-gray-600">Fresh, locally sourced vegetables and fruits picked daily</p>
+      </div>
+
+      <!-- Product Filters -->
+      <!-- <div class="flex flex-wrap justify-center gap-4 mb-8 fade-in"><button onclick="filterProducts('all')" class="product-filter active px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium">All Products</button> <button onclick="filterProducts('leafy')" class="product-filter px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium">Leafy Greens</button>
+        <button onclick="filterProducts('root')" class="product-filter px-6 py-2 rounded-full bg-gray-200 text-gray- font-medium">Root Vegetables</button>
+        <button onclick="filterProducts('fruits')" class="product-filter px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium">Fruits</button> <button onclick="filterProducts('bundles')" class="product-filter px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium">Bundles</button>
+      </div> -->
+      <div id="product-item" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section id="location" class="py-20 gradient-bg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <h2 data-lang="location-title" class="section-title">Our Location</h2>
+        <p data-lang="location-subtitle" class="section-subtitle">Our warehouse and cooling facilities serve as the main distribution center for international buyers.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="fade-in">
+          <div
+            class="bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl h-80 flex items-center justify-center shadow-xl">
+            <div class="text-center">
+              <div class="text-8xl mb-4">
+                📍
+              </div>
+              <p data-lang="city" class="text-xl font-semibold text-gray-700">Jakarta, Indonesia</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="bg-white rounded-3xl p-10 shadow-xl">
+            <h3 data-lang="store-information" class="text-2xl font-bold text-gray-800 mb-8">Stor Information</h3>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="text-3xl">
+                  📍
+                </div>
+                <div>
+                  <h4 data-lang="address" class="font-semibold text-gray-800 mb-1">Address</h4>
+                  <p data-lang="location-address" id="location-address" class="text-gray-600">Jl. Raya Bogor No. 123, East Jakarta, DKI Jakarta 13750</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="text-3xl">
+                  🕒
+                </div>
+                <div>
+                  <h4 data-lang="opening-hours" class="font-semibold text-gray-800 mb-1">Opening Hours</h4>
+                  <p data-lang="time-weekdays" class="text-gray-600">Monday – Saturday: 06:00 – 20:00</p>
+                  <p data-lang="time-weekend" class="text-gray-600">Sunday: 07:00 – 18:00</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="text-3xl">
+                  🚚
+                </div>
+                <div>
+                  <h4 data-lang="delivery-area" class="font-semibold text-gray-800 mb-1">Delivery Areas</h4>
+                  <p data-lang="delivery-cities" class="text-gray-600">Jakarta, Bogor, Depok, Tangerang, Bekasi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <h2 data-lang="contact-button" class="section-title">Contact Us</h2>
+        <p data-lang="contact-subtitle" class="section-subtitle">Contact us for orders, questions, or special requests</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="fade-in">
+          <form onsubmit="handleContactForm(event)"
+            class="bg-gradient-to-br from-green-50 to-lime-50 rounded-3xl p-10 shadow-xl">
+            <h3 data-lang="form-message" class="text-2xl font-bold text-gray-800 mb-8">Send a Message</h3>
+            <div class="space-y-6">
+              <div>
+                <label data-lang="form-name" for="name" class="block text-sm font-semibold text-gray-700 mb-2">Fullname</label> 
+                <input type="text" id="name" name="name" required class="w-full px-5 py-4 rounded-xl border-2 border-green-200 focus:border-green-500 focus:outline-none transition-colors">
+              </div>
+              <div>
+                <label data-lang="form-phone" for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required class="w-full px-5 py-4 rounded-xl border-2 border-green-200 focus:border-green-500 focus:outline-none transition-colors">
+              </div>
+              <div>
+                <label data-lang="form-message" for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message</label> 
+                <textarea id="message" name="message" rows="4" required class="w-full px-5 py-4 rounded-xl border-2 border-green-200 focus:border-green-500 focus:outline-none transition-colors resize-none"></textarea>
+              </div>
+              <button data-lang="form-submit" type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-semibold text-lg shadow-lg"> Kirim Pesan
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="fade-in">
+          <div class="space-y-8">
+            <div class="bg-gradient-to-br from-green-50 to-lime-50 rounded-3xl p-10 text-center shadow-xl">
+              <div class="w-20 h-20 rounded-full bg-green-500 flex items-center justify-center mx-auto mb-6"><span
+                  class="text-4xl">💬</span>
+              </div>
+              <h3 data-lang="whatsapp-title" class="text-2xl font-bold text-gray-800 mb-4">Contact via WhatsApp</h3>
+              <p data-lang="contact-us-subtitle" class="text-gray-600 mb-6">Contact us for more information about our products and services. Our team is ready to assist you.</p>
+              <button data-lang="whatsapp-button" onclick="openWhatsApp()" class="btn-primary text-white px-8 py-4 rounded-full font-semibold shadow-lg"> Chat via WhatsApp
+              </button>
+            </div>
+            <div class="space-y-6 bg-white rounded-3xl p-10 shadow-xl">
+              <div class="flex items-center gap-4">
+                <div class="text-3xl">
+                  📱
+                </div>
+                <div>
+                  <h4 data-lang="form-phone" class="font-semibold text-gray-800">Phone Number</h4>
+                  <p id="contact-phone" class="text-gray-600">+62 812-3456-7890</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="text-3xl">
+                  📧
+                </div>
+                <div>
+                  <h4 data-lang="form-email" class="font-semibold text-gray-800">Email</h4>
+                  <p id="contact-email" class="text-gray-600">hello@freshleaf.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-lg">
+              <span class="text-white text-2xl">🌿</span>
+            </div>
+            <div>
+              <h3 id="footer-company-name" class="text-2xl font-bold">FreshLeaf</h3>
+              <p data-lang="header-tagline" id="footer-tagline" class="text-sm text-gray-400">Nature’s Harvest, Fresh Every Day</p>
+            </div>
+          </div>
+          <p data-lang="footer-description" class="text-gray-300 mb-6 leading-relaxed">Fresh vegetables and coconuts are delivered daily from local farmers to your place. Supporting healthy living and sustainable agriculture.</p>
+          <div class="flex gap-4"><a href="#"
+              class="w-12 h-12 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center transition-colors">
+              <span class="text-2xl">📘</span> </a> <a href="#"
+              class="w-12 h-12 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center transition-colors">
+              <span class="text-2xl">📷</span> </a> <a href="#"
+              class="w-12 h-12 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center transition-colors">
+              <span class="text-2xl">🐦</span> </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-6">Tautan Cepat</h4>
+          <ul class="space-y-3">
+            <li><a data-lang="nav-home" href="#home" class="text-gray-300 hover:text-green-400 transition-colors">Home</a></li>
+            <li><a data-lang="nav-about" href="#about" class="text-gray-300 hover:text-green-400 transition-colors">About Us</a></li>
+            <li><a data-lang="nav-services" href="#services" class="text-gray-300 hover:text-green-400 transition-colors">Services</a></li>
+            <li><a data-lang="nav-products" href="#products" class="text-gray-300 hover:text-green-400 transition-colors">Products</a></li>
+            <li><a data-lang="nav-location" href="#location" class="text-gray-300 hover:text-green-400 transition-colors">Location</a></li>
+            <li><a data-lang="nav-contact" href="#contact" class="text-gray-300 hover:text-green-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-lang="contact-info" class="text-lg font-bold mb-6">Contact Info</h4>
+          <ul class="space-y-3 text-gray-300">
+            <li data-lang="form-phone" id="footer-phone">+62 812-3456-7890</li>
+            <li id="footer-email">hello@freshleaf.com</li>
+            <li data-lang="address" id="footer-address">Jl. Raya Bogor No. 123, East Jakarta, DKI Jakarta 13750</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p data-lang="footer-text" class="text-gray-400">© 2024 FreshLeaf. All Rights Reserved. Made with 💚 for fresh food lovers.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Product Detail Modal -->
+  <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4 modal-overlay"
+    onclick="closeProductDetail()">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto modal-content-animate"
+      onclick="event.stopPropagation()">
+      <div class="p-6 sm:p-8">
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold text-gray-800"></h2>
+          <button onclick="closeProductDetail()" class="text-gray-500 hover:text-gray-700 text-3xl font-light">
+            ×
+          </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Product Image -->
+          <div class="space-y-4">
+            <img id="modal-image" src="" alt="" class="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg">
+            <div class="grid grid-cols-3 gap-2" id="modal-gallery">
+              <!-- Additional images will be populated here -->
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2" data-lang="description">Description</h3>
+              <p id="modal-description" class="text-gray-600 leading-relaxed"></p>
+            </div>
+            <!-- <div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">Nutritional Benefits</h3>
+              <ul id="modal-benefits" class="space-y-2 text-gray-600">
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">Storage &amp; Usage Tips</h3>
+              <div id="modal-tips" class="space-y-2 text-gray-600">
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Availability</h3>
+              <div id="modal-availability" class="flex items-center space-x-2">
+              </div>
+            </div> -->
+
+            <div class="border-t pt-6">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="orderProduct()" data-lang="contact-button"
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg">
+                  Contact Us via Whatsapp
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/product.js"></script>
+  <script src="scripts/language.js"></script>
+</body>
+
+</html>
