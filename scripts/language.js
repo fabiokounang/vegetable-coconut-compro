@@ -1,96 +1,6 @@
 const translations = {
-  id: {
-    'header-company': 'FreshLeaf',
-    'header-tagline': 'Panen Alam, Segar Setiap Hari',
-
-    // hero section (ID as default language – teks ada di HTML, jadi di sini tidak perlu override)
-    // (biarkan kosong jika tidak dipakai untuk versi Indonesia)
-
-    // tombol umum
-    'view-our-products': 'Lihat Produk Kami',
-
-    // about (versi pendek – yang panjang sudah kamu tulis terpisah kalau perlu)
-    'about-us-title': 'Tentang FreshLeaf',
-    // about-us-description-* untuk ID belum kamu definisikan, jadi tidak saya tambahkan agar tidak mengubah isi
-
-    // services (judul besar)
-    'service-title': 'Layanan Kami',
-    'service-subtitle': 'Solusi distribusi sayuran dan kelapa untuk berbagai kebutuhan bisnis',
-    // service-title-1..4 dan subtitle-1..4 belum ada versi ID di object awal, jadi saya tidak tambahkan
-
-    // products (judul section)
-    'product-title': 'Produk Kami',
-    'product-subtitle': 'Sayuran segar, buah, dan kelapa premium - semua dari sumber lokal',
-
-    // NAV
-    'nav-home': 'Beranda',
-    'nav-about': 'Tentang Kami',
-    'nav-services': 'Layanan',
-    'nav-products': 'Produk',
-    'nav-location': 'Lokasi',
-    'nav-contact': 'Kontak',
-
-    // hero buttons
-    'hero-btn-products': 'Lihat Produk Kami',
-    'hero-btn-contact': 'Hubungi Kami',
-    'hero-btn-about': 'Tentang Kami',
-    'hero-btn-services': 'Layanan Kami',
-
-    // about title (section lain)
-    'about-title': 'Tentang FreshLeaf',
-
-    // products section title (duplikat nama berbeda)
-    'products-title': 'Produk Kami',
-    'products-subtitle': 'Sayuran segar, buah, dan kelapa premium - semua dari sumber lokal',
-
-    // produk spesifik (belum ada di object ID – tidak saya ubah)
-
-    // detail modal label
-    'description': 'Deskripsi',
-
-    // location section
-    'location-title': 'Lokasi Kami',
-    'location-subtitle': 'Kunjungi toko kami atau pesan online untuk pengantaran cepat di area Anda',
-    // city/store-information/address dsb untuk ID belum ada di object awal
-
-    // contact section
-    'contact-button': 'Hubungi Kami',
-    'contact-title': 'Hubungi Kami',
-    'contact-subtitle': 'Hubungi kami untuk pesanan, pertanyaan, atau permintaan khusus',
-    // contact-us-subtitle belum ada di ID
-
-    // footer short description belum ada di ID
-
-    // filters
-    'filter-all': 'Semua Produk',
-    'filter-leafy': 'Sayuran Hijau',
-    'filter-root': 'Sayuran Umbi',
-    'filter-fruits': 'Buah & Cabai',
-    'filter-coconuts': 'Kelapa',
-    'filter-bundles': 'Paket Hemat',
-
-    // product detail CTA
-    'product-detail': 'Klik untuk info detail →',
-
-    // form
-    'form-title': 'Kirim Pesan',
-    'form-name': 'Nama Lengkap',
-    'form-phone': 'Nomor Telepon',
-    'form-message': 'Pesan',
-    'form-submit': 'Kirim Pesan',
-
-    // WhatsApp box
-    'whatsapp-title': 'Hubungi via WhatsApp',
-    'whatsapp-button': 'Chat via WhatsApp',
-
-    // footer
-    'quick-links': 'Tautan Cepat',
-    'contact-info': 'Info Kontak',
-    'footer-text': 'Hak Cipta Dilindungi. Dibuat dengan 💚 untuk pecinta makanan segar.'
-  },
-
   en: {
-    'header-company': 'FreshLeaf',
+    'header-company': 'Alam Sayur Indonesia',
     'header-tagline': 'Nature’s Harvest, Fresh Every Day',
 
     // hero section
@@ -104,17 +14,15 @@ const translations = {
     'view-our-products': 'View Our Products',
 
     // about
-    'about-us-title': 'About FreshLeaf',
+    'about-us-title': 'About Alam Sayur Indonesia',
     'about-us-description-1': `
-        <strong>FreshLeaf</strong> is a trusted distributor of <strong>vegetables</strong> and <strong>coconuts</strong>,
-        serving the needs of culinary businesses across Indonesia. We provide high-quality products with a stable supply
-        for restaurants, hotels, catering services, and other food-related enterprises.`,
-    'about-us-description-2': `With a spacious warehouse and an efficient logistics system, we are able to fulfill both large and small orders. We work directly with selected local farmers to ensure daily freshness and consistent product quality.`,
-    'about-us-description-3': `Supported by a professional and experienced team, FreshLeaf is committed to providing the best service at competitive prices. Customer trust is our top priority in every transaction.`,
+       At <strong>Alam Sayur Indonesia</strong>, we bring Indonesia’s freshest farm products to the world. With more than 15 years of experience in the agriculture and export industry, and over 300 hectares of professionally managed farmland, we supply a wide range of export-quality produce — including <strong>crisp cabbage, juicy lemons, fresh lettuce, premium white cabbage (napa cabbage), and high-grade semi husked coconuts</strong>.`,
+    'about-us-description-2': `Every harvest is grown with care, packed at peak freshness, and shipped under strict quality control to meet global standards. Our partners choose us for one simple reason: we deliver consistent quality, reliable volume, and products that truly stand out in international markets.`,
+    // 'about-us-description-3': `Supported by a professional and experienced team, Alam Sayur Indonesia is committed to providing the best service at competitive prices. Customer trust is our top priority in every transaction.`,
 
     // services
-    'service-title': 'Our Services',
-    'service-subtitle': 'Export solutions for fresh vegetables and coconuts for international buyers',
+    'service-title': 'Why Us?',
+    'service-subtitle': 'One stop solutions for fresh vegetables, fruits and coconuts for international buyers',
     'service-title-1': 'International Shipping',
     'service-subtitle-1': 'Fast and secure delivery to Taiwan, Singapore, Malaysia, and Thailand with strict export standards.',
     'service-title-2': 'Supplier for Importers',
@@ -131,7 +39,7 @@ const translations = {
     // nav
     'nav-home': 'Home',
     'nav-about': 'About Us',
-    'nav-services': 'Services',
+    'nav-services': 'Why Us?',
     'nav-products': 'Products',
     'nav-location': 'Location',
     'nav-contact': 'Contact',
@@ -143,7 +51,7 @@ const translations = {
     'hero-btn-services': 'Our Services',
 
     // about section small title
-    'about-title': 'About FreshLeaf',
+    'about-title': 'About Alam Sayur Indonesia',
 
     // products section (alt title)
     'products-title': 'Our Products',
@@ -207,7 +115,7 @@ const translations = {
     // footer
     'quick-links': 'Quick Links',
     'contact-info': 'Contact Info',
-    'footer-text': '© 2024 FreshLeaf. All Rights Reserved. Made with 💚 for fresh food lovers.'
+    'footer-text': '© 2024 Alam Sayur Indonesia. All Rights Reserved. Made with 💚 for fresh food lovers.'
   },
 
   zh: {
@@ -225,19 +133,17 @@ const translations = {
     'view-our-products': '查看我们的产品',
 
     // about
-    'about-us-title': '关于 弗瑞什利夫',
+    'about-us-title': '关于印尼Alam Sayur',
     'about-us-description-1': `
-        <strong>FreshLeaf</strong> 是一家值得信赖的 <strong>蔬菜</strong> 与 <strong>椰子</strong> 供应商，        为全印尼的餐饮企业提供服务。我们为餐厅、酒店、外卖与餐饮公司等食品行业提供高品质且稳定的供应。
-      </p>`,
+    在 <strong>Alam Sayur Indonesia</strong>，我们将印尼最新鲜的农产品带向世界。凭借超过15年的农业与出口经验，以及超过300公顷专业管理的农田，我们供应多种出口级农产品 —— 包括<strong>清脆的卷心菜、多汁的柠檬、新鲜的生菜、优质的大白菜，以及高品质的半壳椰子</strong>。`,
     'about-us-description-2': `
-        凭借宽敞的仓库与高效的物流系统，我们能够轻松处理大批量及小批量订单。
-        我们直接与当地精选农民合作，确保每天提供新鲜、稳定且高品质的产品。
-      `,
-    'about-us-description-3': `在专业且经验丰富的团队支持下，FreshLeaf 致力于以具竞争力的价格提供最佳服务。 客户的信任始终是我们每一笔交易中的首要目标`,
+    每一次采收都经过精心栽培，在最佳新鲜度时包装，并在严格的质量控制下运输，以符合国际标准。我们的合作伙伴选择我们只有一个原因：我们始终提供稳定的品质、可靠的供应量，以及真正能在国际市场脱颖而出的产品。`,
+
+    // 'about-us-description-3': `在专业且经验丰富的团队支持下，Alam Sayur Indonesia 致力于以具竞争力的价格提供最佳服务。 客户的信任始终是我们每一笔交易中的首要目标`,
 
     // services
-    'service-title': '我们的服务',
-    'service-subtitle': '为国际买家提供新鲜蔬菜和椰子的出口解决方案',
+    'service-title': '为什么选择我们？',
+    'service-subtitle': '为国际买家提供蔬菜、水果与椰子的一站式采购解决方案',
     'service-title-1': '国际运输',
     'service-subtitle-1': '以严格的出口标准快速、安全地配送至台湾、新加坡、马来西亚和泰国。',
     'service-title-2': '进口商供应商',
@@ -254,7 +160,7 @@ const translations = {
     // nav
     'nav-home': '首页',
     'nav-about': '关于我们',
-    'nav-services': '服务',
+    'nav-services': '为什么选择我们？',
     'nav-products': '产品',
     'nav-location': '位置',
     'nav-contact': '联系',
@@ -266,7 +172,7 @@ const translations = {
     'hero-btn-services': '我们的服务',
 
     // about section title
-    'about-title': '关于 FreshLeaf',
+    'about-title': '关于 Alam Sayur Indonesia',
 
     // products section alt title
     'products-title': '我们的产品',
@@ -330,7 +236,7 @@ const translations = {
     // footer
     'quick-links': '快速链接',
     'contact-info': '联系信息',
-    'footer-text': '© 2024 FreshLeaf. 版权所有。用 💚 为热爱新鲜食材的人们而打造。'
+    'footer-text': '© 2024 Alam Sayur Indonesia. 版权所有。用 💚 为热爱新鲜食材的人们而打造。'
   }
 };
 
@@ -347,15 +253,15 @@ function changeLanguage(lang) {
     const btnMobile = document.getElementById(`lang-${l}-mobile`);
 
     if (l === lang) {
-      btn ?.classList.add('bg-gradient-to-r', 'from-green-500', 'to-green-600', 'text-white', 'shadow-md');
-      btn ?.classList.remove('text-gray-600');
+      btn.classList.add('bg-gradient-to-r', 'from-green-500', 'to-green-600', 'text-white', 'shadow-md');
+      btn .classList.remove('text-gray-600');
       btnMobile ?.classList.add('bg-gradient-to-r', 'from-green-500', 'to-green-600', 'text-white', 'shadow-md');
       btnMobile ?.classList.remove('text-gray-600');
     } else {
-      btn ?.classList.remove('bg-gradient-to-r', 'from-green-500', 'to-green-600', 'text-white', 'shadow-md');
-      btn ?.classList.add('text-gray-600');
-      btnMobile ?.classList.remove('bg-gradient-to-r', 'from-green-500', 'to-green-600', 'text-white', 'shadow-md');
-      btnMobile ?.classList.add('text-gray-600');
+      btn.classList.remove('bg-gradient-to-r', 'from-green-500', 'to-green-600', 'text-white', 'shadow-md');
+      btn.classList.add('text-gray-600');
+      btnMobile.classList.remove('bg-gradient-to-r', 'from-green-500', 'to-green-600', 'text-white', 'shadow-md');
+      btnMobile.classList.add('text-gray-600');
     }
   });
 

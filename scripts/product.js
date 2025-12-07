@@ -117,6 +117,7 @@ function showProductDetail(productId) {
     const img = document.createElement('img');
     img.src = imageSrc;
     img.alt = `${product.title} view ${index + 1}`;
+    img.setAttribute('loading', 'lazy');
     img.className =
       'w-full h-16 sm:h-20 object-cover rounded-lg cursor-pointer hover:opacity-75 transition-opacity';
     img.onclick = () => {

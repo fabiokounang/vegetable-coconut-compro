@@ -1,0 +1,28 @@
+ {
+    "@context": "https://schema.org",
+    "@type": "WholesaleStore",
+    "name": "FreshLeaf",
+    "description": "FreshLeaf is a distributor of fresh vegetables and coconuts based in Jakarta, Indonesia, serving restaurants, hotels, catering services, and international importers.",
+    "url": "https://alamsayur.com/",
+    "telephone": "+62 812-3456-7890",
+    "email": "hello@freshleaf.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Raya Bogor No. 123",
+      "addressLocality": "East Jakarta",
+      "addressRegion": "DKI Jakarta",
+      "postalCode": "13750",
+      "addressCountry": "ID"
+    },
+    "areaServed": [
+      "Jakarta",
+      "Bogor",
+      "Depok",
+      "Tangerang",
+      "Bekasi",
+      "Taiwan",
+      "Singapore",
+      "Malaysia",
+      "Thailand"
+    ]
+  }
