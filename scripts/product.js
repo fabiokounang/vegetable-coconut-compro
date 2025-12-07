@@ -76,7 +76,7 @@ const productDetails = {
     let short_desc = productDetails[key].short_desc;
     productItem.innerHTML += `
           <div class="product-card bg-white rounded-2xl p-6 hover-lift fade-in cursor-pointer" data-category="${cat}" onclick="showProductDetail('${key}')">
-            <img src="${img}" alt="${title}" class="w-full h-32 object-cover rounded-lg mb-4" onerror="this.src=''; this.alt='${key} image failed to load'; this.style.display='none';">
+            <img src="${img}" alt="${title}" loading="lazy" class="w-full h-32 object-cover rounded-lg mb-4" onerror="this.src=''; this.alt='${key} image failed to load'; this.style.display='none';">
             <h3 data-lang="${key}" class="text-lg font-semibold text-gray-800 mb-2">${title}</h3>
             <p data-lang="${key}-short-desc" class="text-gray-600 text-sm mb-3">${short_desc}</p>
           </div>
