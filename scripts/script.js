@@ -1,5 +1,5 @@
 const defaultConfig = {
-  company_name: "FreshLeaf",
+  company_name: "Alam Sayur Indonesia",
   tagline: "Panen Alam, Segar Setiap Hari",
   hero_headline_1: "Distributor Sayuran & Kelapa Berkualitas",
   hero_subtext_1: "Menyediakan sayuran segar dan kelapa berkualitas tinggi untuk kebutuhan bisnis kuliner, restoran, hotel, dan catering Anda.",
@@ -8,7 +8,7 @@ const defaultConfig = {
   hero_headline_3: "Pasokan Stabil, Harga Kompetitif",
   hero_subtext_3: "Gudang lengkap dengan stok melimpah. Siap memenuhi kebutuhan pasokan dalam jumlah besar dengan harga terbaik.",
   phone_number: "+62 812-3456-7890",
-  email_address: "hello@freshleaf.com",
+  email_address: "sales@alamsayur.com",
   store_address: "Jl. Raya Bogor No. 123, Jakarta Timur, DKI Jakarta 13750"
 };
 
@@ -97,6 +97,49 @@ function handleContactForm(event) {
 
   form.dataset.originalHtml = originalHTML;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // cegah submit normal (yang bikin 405/404)
+
+    // Honeypot: kalau bot-field terisi, jangan kirim apa-apa
+    const botField = form.querySelector('input[name="bot-field"]');
+    if (botField && botField.value) {
+      return;
+    }
+
+    const payload = {
+      name: form.name.value,
+      phone: form.phone.value,
+      message: form.message.value
+    };
+
+    fetch('https://formsubmit.co/ajax/sales@alamsayur.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(function (data) {
+        // Jika sukses → redirect ke success.html
+        window.location.href = '/success.html';
+      })
+      .catch(function (error) {
+        console.error('Form submit error:', error);
+        alert('Sorry, something went wrong. Please try again or contact us via WhatsApp.');
+      });
+  });
+});
+
 
 function resetContactForm(button) {
   const form = button.closest('form');
