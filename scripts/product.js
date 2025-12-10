@@ -1,4 +1,3 @@
-
 // Product filtering
 function filterProducts(category) {
   const products = document.querySelectorAll('.product-card');
@@ -129,18 +128,21 @@ const productDetails = {
     let title = productDetails[key].title;
     let short_desc = productDetails[key].short_desc;
     productItem.innerHTML += `
-          <div class="product-card bg-white rounded-2xl p-6 hover-lift fade-in cursor-pointer" data-category="${cat}" onclick="showProductDetail('${key}')">
-            <img src="${img}" alt="${title}" loading="lazy" class="w-full h-32 object-cover rounded-lg mb-4" onerror="this.src=''; this.alt='${key} image failed to load'; this.style.display='none';">
-            <h3 data-lang="${key}" class="text-lg font-semibold text-gray-800 mb-2">${title}</h3>
-            <p data-lang="${key}-short-desc" class="text-gray-600 text-sm mb-3">${short_desc}</p>
-          </div>
-        `;
+      <div class="product-card bg-white rounded-2xl p-6 hover-lift fade-in cursor-pointer" data-category="${cat}" onclick="showProductDetail('${key}')">
+        <img src="${img}" alt="${title}" loading="lazy" class="w-full h-32 object-cover rounded-lg mb-4" onerror="this.src=''; this.alt='${key} image failed to load'; this.style.display='none';">
+        <h3 data-i18n="${key}" class="text-lg font-semibold text-gray-800 mb-2">${title}</h3>
+        <p data-i18n="${key}-short-desc" class="text-gray-600 text-sm mb-3">${short_desc}</p>
+      </div>
+    `;
   });
 })();
 
+function t(key) {
+  return i18next.t(key);
+}
+
 // Product detail functions
 function showProductDetail(productId) {
-  let currentProduct = productId;
   const product = productDetails[productId];
   if (!product) return;
 
@@ -149,11 +151,12 @@ function showProductDetail(productId) {
   const zhBtnMobile = document.getElementById('lang-zh-mobile');
   const isActive = zhBtn.classList.contains('bg-gradient-to-r');
   const isActiveMobile = zhBtnMobile.classList.contains('bg-gradient-to-r');
+  const isZh = isActive || isActiveMobile;
 
-  if (isActive || isActiveMobile) {
-    document.getElementById('modal-title').innerHTML = translations['zh'][productId.trim()];
-    document.getElementById('modal-image').alt = translations['zh'][productId.trim()];
-    document.getElementById('modal-description').innerHTML = translations['zh'][productId.trim() + '-description'];
+  if (isZh) {
+    document.getElementById('modal-title').innerHTML = t([productId.trim()]);
+    document.getElementById('modal-image').alt = t([productId.trim()]);
+    document.getElementById('modal-description').innerHTML = t([productId.trim() + '-description']);
   } else {
     document.getElementById('modal-title').innerHTML = product.title;
     document.getElementById('modal-image').alt = product.title;
@@ -186,12 +189,21 @@ function showProductDetail(productId) {
   // Update benefits
   const benefitsList = document.getElementById('modal-benefits');
   benefitsList.innerHTML = '';
-  product.benefits.forEach(benefit => {
+
+  product.benefits.forEach((benefit, i) => {
     const li = document.createElement('li');
-    li.textContent = benefit;
     li.className = 'flex items-start';
+
+    const key = `${productId}-nutritional-${i + 1}`;
+    li.setAttribute('data-i18n', key);
+
+    // kalau Chinese aktif → pakai i18n.t
+    // kalau English → pakai data dari product.benefits
+    li.textContent = isZh ? t(key) : benefit;
+
     benefitsList.appendChild(li);
   });
+
 
   // // Update tips
   // const tipsList = document.getElementById('modal-tips');
