@@ -42,12 +42,23 @@
   "about-title": "关于 Alam Sayur Indonesia",
   "products-title": "我们的产品",
   "products-subtitle": "新鲜蔬菜、水果和优质椰子 - 全部来自当地",
+
   "cabbage": "有机新鲜卷心菜",
   "cabbage-short-desc": "有机卷心菜叶，适合用于沙拉和各类烹饪料理",
   "cabbage-description": "我们的优质卷心菜由值得信赖的当地农场新鲜采收，并储存在控温设施中，以保持其爽脆的口感和天然风味。每一颗都经过精心挑选，确保高品质、新鲜度和纯净度。非常适合用于炒菜、汤品、沙拉、火锅以及各种国际料理。采用天然方式种植，不含有害化学物质，是您日常烹饪的健康选择。",
+  
   "coconut": "半去壳椰子",
   "coconut-short-desc": "适合出口的新鲜半去壳椰子",
   "coconut-description": "我们的半去壳椰子来自高品质农场，并经过细致处理以保持新鲜。非常适合出口至台湾、新加坡、马来西亚和泰国。",
+
+  "lemon": "优质柠檬",
+  "lemon-short-desc": "新鲜优质柠檬，适合出口与日常健康生活",
+  "lemon-description": "我们的新鲜柠檬由可信赖的农场精心采摘，确保最佳风味与品质。非常适合出口至台湾、新加坡、马来西亚和泰国。",
+
+  "corn": "甜玉米",
+  "corn-short-desc": "新鲜天然甜玉米，适合出口与日常食用",
+  "corn-description": "我们的甜玉米来自优质农场，以天然甜味和柔嫩口感著称。经过精心包装以保持新鲜，是出口至台湾、新加坡、马来西亚和泰国的理想选择。",
+
   "description": "描述",
   "location-title": "我们的位置",
   "location-subtitle": "我们的仓库和冷链设施是为国际买家服务的主要配送中心。",
@@ -59,7 +70,7 @@
   "time-weekdays": "星期一 - 星期六：06:00 - 20:00",
   "time-weekend": "星期天：07:00 - 18:00",
   "delivery-area": "配送区域",
-  "delivery-cities": "Malaysia, Singapore, Thailand, China",
+  "delivery-cities": "Malaysia, Singapore, Thailand, Taiwan",
   "contact-button": "联系我们",
   "contact-title": "联系我们",
   "contact-subtitle": "联系我们订购、咨询或特殊要求",

@@ -543,7 +543,7 @@
   <!-- Product Detail Modal -->
   <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4 modal-overlay"
     onclick="closeProductDetail()">
-    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto modal-content-animate"
+    <div class="bg-white rounded-2xl max-w-7xl w-full max-h-[90vh] overflow-y-auto modal-content-animate"
       onclick="event.stopPropagation()">
       <div class="p-6 sm:p-8">
         <!-- Modal Header -->
@@ -568,14 +568,14 @@
           <div class="space-y-6">
             <div>
               <h3 class="text-lg font-semibold text-gray-800 mb-2" data-i18n="description">Description</h3>
-              <p id="modal-description" class="text-gray-600 leading-relaxed"></p>
-            </div>
-            <!-- <div>
-              <h3 class="text-lg font-semibold text-gray-800 mb-3">Nutritional Benefits</h3>
-              <ul id="modal-benefits" class="space-y-2 text-gray-600">
-              </ul>
+              <p id="modal-description" class="text-gray-600 leading-relaxed text-md"></p>
             </div>
             <div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">Nutritional Benefits</h3>
+              <ul id="modal-benefits" class="space-y-2 text-gray-600 text-md">
+              </ul>
+            </div>
+            <!-- <div>
               <h3 class="text-lg font-semibold text-gray-800 mb-3">Storage &amp; Usage Tips</h3>
               <div id="modal-tips" class="space-y-2 text-gray-600">
               </div>
@@ -586,14 +586,14 @@
               </div>
             </div> -->
 
-            <div class="border-t pt-6">
+            <!-- <div class="border-t pt-6">
               <div class="flex flex-col sm:flex-row gap-4">
                 <button onclick="orderProduct()" data-i18n="contact-button"
                   class="flex-1 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg">
-                  Contact Us via Whatsapp
+                  Contact Us
                 </button>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>

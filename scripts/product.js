@@ -28,8 +28,14 @@ const productDetails = {
       "images/image7.jpeg"
     ],
     short_desc: "Organic cabbage leaves, perfect for salads and cooking",
-    description: "Our premium cabbage is freshly harvested from trusted local farms and stored in a temperature-controlled facility to maintain its crisp texture and natural flavor. Each head is carefully selected to ensure high quality, freshness, and purity. Ideal for stir-fries, soups, salads, hotpot, and a wide variety of international dishes. Naturally grown without harmful chemicals, making it a healthy choice for everyday cooking.",
-    benefits: [],
+    description: "Our premium cabbage is freshly harvested from trusted local farms and stored in a temperature-controlled facility to maintain its crisp texture and natural flavor.",
+    benefits: [
+      "🥬 High in vitamins C and K to support immunity and bone health",
+      "🌱 Rich in antioxidants that help protect cells from damage",
+      "💪 Good source of fiber for better digestion",
+      "🔥 Low in calories, ideal for weight-management diets",
+      "💧 Contains water-rich nutrients that support hydration"
+    ],
     tips: [],
     availability: []
   },
@@ -44,7 +50,13 @@ const productDetails = {
     ],
     short_desc: "Fresh semi-husk coconuts for export",
     description: "Our semi-husk coconuts are sourced from high-quality farms and processed with care to maintain freshness. Ideal for export to Taiwan, Singapore, Malaysia, and Thailand.",
-    benefits: [],
+    benefits: [
+      "🥥 Naturally hydrating with essential electrolytes",
+      "💪 Rich in healthy fats that support sustained energy",
+      "🛡️ Contains lauric acid, known for antimicrobial properties",
+      "🌿 Long shelf life, making it excellent for export use",
+      "🔥 Versatile ingredient for beverages, cooking, and cosmetics"
+    ],
     tips: [],
     availability: []
   },
@@ -59,7 +71,34 @@ const productDetails = {
     ],
     short_desc: "Fresh, premium lemon for export and perfect for lifestyle",
     description: "Our fresh lemons are handpicked from trusted farms to ensure the best flavor and quality. Perfect for export markets such as Taiwan, Singapore, Malaysia, and Thailand.",
-    benefits: [],
+    benefits: [
+      "🍋 High in vitamin C to boost immunity and skin health",
+      "💧 Supports hydration and natural detox processes",
+      "🔥 Aids digestion and helps maintain a healthy metabolism",
+      "🛡️ Rich in antioxidants that fight free radicals",
+      "🌿 Fresh aroma that enhances culinary and beverage recipes"
+    ],
+    tips: [],
+    availability: []
+  },
+  corn: {
+    category: "vegetable",
+    title: "Sweet Corn",
+    image: "images/image15.jpeg",
+    gallery: [
+      "images/image15.jpeg",
+      "images/image16.jpeg",
+      "images/image17.png"
+    ],
+    short_desc: "Fresh, naturally sweet corn for export and daily consumption",
+    description: "Our sweet corn is selected from quality farms, known for its natural sweetness and tender kernels. Carefully packed to maintain freshness, making it an excellent choice for export to Taiwan, Singapore, Malaysia, and Thailand.",
+    benefits: [
+      "🌽 Naturally rich in fiber to support digestion",
+      "💪 Provides essential B vitamins for energy metabolism",
+      "👀 Contains lutein and zeaxanthin to support eye health",
+      "⚡ Good source of natural carbohydrates for long-lasting energy",
+      "🥗 Versatile for salads, soups, grilling, and daily meals"
+    ],
     tips: [],
     availability: []
   },
@@ -144,15 +183,15 @@ function showProductDetail(productId) {
     gallery.appendChild(img);
   });
 
-  // // Update benefits
-  // const benefitsList = document.getElementById('modal-benefits');
-  // benefitsList.innerHTML = '';
-  // product.benefits.forEach(benefit => {
-  //   const li = document.createElement('li');
-  //   li.textContent = benefit;
-  //   li.className = 'flex items-start';
-  //   benefitsList.appendChild(li);
-  // });
+  // Update benefits
+  const benefitsList = document.getElementById('modal-benefits');
+  benefitsList.innerHTML = '';
+  product.benefits.forEach(benefit => {
+    const li = document.createElement('li');
+    li.textContent = benefit;
+    li.className = 'flex items-start';
+    benefitsList.appendChild(li);
+  });
 
   // // Update tips
   // const tipsList = document.getElementById('modal-tips');

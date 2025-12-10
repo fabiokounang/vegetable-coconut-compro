@@ -42,12 +42,23 @@
   "about-title": "About Alam Sayur Indonesia",
   "products-title": "Our Products",
   "products-subtitle": "Fresh vegetables, fruits, and premium coconuts - all from local sources",
+  
   "cabbage": "Fresh Organic Cabbage",
   "cabbage-short-desc": "Organic cabbage leaves, perfect for salads and cooking",
   "cabbage-description": "Our premium cabbage is freshly harvested from trusted local farms and stored in a temperature-controlled facility to maintain its crisp texture and natural flavor. Each head is carefully selected to ensure high quality, freshness, and purity. Ideal for stir-fries, soups, salads, hotpot, and a wide variety of international dishes. Naturally grown without harmful chemicals, making it a healthy choice for everyday cooking.",
+  
   "coconut": "Semi Husk Coconut",
   "coconut-short-desc": "Fresh semi-husk coconuts for export",
   "coconut-description": "Our semi-husk coconuts are sourced from high-quality farms and processed with care to maintain freshness. Ideal for export to Taiwan, Singapore, Malaysia, and Thailand.",
+
+  "lemon": "Premium Lemon",
+  "lemon-short-desc": "Fresh, premium lemon for export and perfect for lifestyle",
+  "lemon-description": "Our fresh lemons are handpicked from trusted farms to ensure the best flavor and quality. Perfect for export markets such as Taiwan, Singapore, Malaysia, and Thailand.",
+
+  "corn": "Sweet Corn",
+  "corn-short-desc": "Fresh, naturally sweet corn for export and daily consumption",
+  "corn-description": "Our sweet corn is selected from quality farms, known for its natural sweetness and tender kernels. Carefully packed to maintain freshness, making it an excellent choice for export to Taiwan, Singapore, Malaysia, and Thailand.",
+
   "description": "Description",
   "location-title": "Our Location",
   "location-subtitle": "Our warehouse and cooling facilities serve as the main distribution center for international buyers.",
@@ -59,7 +70,7 @@
   "time-weekdays": "Monday – Saturday: 06:00 – 20:00",
   "time-weekend": "Sunday: 07:00 – 18:00",
   "delivery-area": "Delivery Areas",
-  "delivery-cities": "Malaysia, Singapore, Thailand, China",
+  "delivery-cities": "Malaysia, Singapore, Thailand, Taiwan",
   "contact-button": "Contact Us",
   "contact-title": "Contact Us",
   "contact-subtitle": "Contact us for orders, questions, or special requests",
