@@ -40,14 +40,29 @@ const productDetails = {
     gallery: [
       "images/image5.jpeg",
       "images/image6.jpeg",
-      "images/image8.jpeg"
+      "images/image14.jpeg"
     ],
     short_desc: "Fresh semi-husk coconuts for export",
     description: "Our semi-husk coconuts are sourced from high-quality farms and processed with care to maintain freshness. Ideal for export to Taiwan, Singapore, Malaysia, and Thailand.",
     benefits: [],
     tips: [],
     availability: []
-  }
+  },
+  lemon: {
+    category: "fruit",
+    title: "Lemon",
+    image: "images/image11.png",
+    gallery: [
+      "images/image11.png",
+      "images/image12.jpeg",
+      "images/image13.jpeg"
+    ],
+    short_desc: "Fresh, premium lemon for export and perfect for lifestyle",
+    description: "Our fresh lemons are handpicked from trusted farms to ensure the best flavor and quality. Perfect for export markets such as Taiwan, Singapore, Malaysia, and Thailand.",
+    benefits: [],
+    tips: [],
+    availability: []
+  },
   // benefits: [
   //   "🥬 Rich in vitamins C and K to support immunity and bone strength",
   //   "💪 High in fiber, promoting healthy digestion",

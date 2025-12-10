@@ -7,9 +7,9 @@ const defaultConfig = {
   hero_subtext_2: "Bermitra dengan petani lokal pilihan untuk menjamin kualitas dan kesegaran produk. Solusi pasokan terpercaya untuk bisnis Anda.",
   hero_headline_3: "Pasokan Stabil, Harga Kompetitif",
   hero_subtext_3: "Gudang lengkap dengan stok melimpah. Siap memenuhi kebutuhan pasokan dalam jumlah besar dengan harga terbaik.",
-  phone_number: "+62 812-3456-7890",
+  phone_number: "+62 81-905-060-408",
   email_address: "sales@alamsayur.com",
-  store_address: "Jl. Raya Bogor No. 123, Jakarta Timur, DKI Jakarta 13750"
+  store_address: "Jl. Raya Langsep No. 109, Bareng, Kec. Klojen, Kota Malang, Jawa Timur 65146"
 };
 
 // Carousel functionality
