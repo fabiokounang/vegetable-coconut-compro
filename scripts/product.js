@@ -101,6 +101,37 @@ const productDetails = {
     tips: [],
     availability: []
   },
+  tamarind: {
+    category: "vegetable",
+    title: "Tamarind (Asam Jawa)",
+    image: "images/image18.jpeg",
+    gallery: [
+      "images/image18.jpeg",
+      "images/image19.jpeg",
+      "images/image20.jpeg"
+    ],
+    short_desc: "Premium tamarind with a balanced sweet–sour taste for culinary and beverage use",
+    description: "Our tamarind is carefully sourced and selected for its rich aroma and naturally tangy flavor. Ideal for export and food manufacturing, it is suitable for sauces, seasonings, beverages, and traditional cooking. Packed to maintain quality and freshness during delivery.",
+    benefits: [
+      "🍋 Naturally contains organic acids that add a refreshing tangy taste",
+      "🧪 Contains antioxidants that help support overall wellness",
+      "🥣 Traditionally used to support digestion when consumed in moderation",
+      "💧 Often used in drinks and recipes for a refreshing flavor profile",
+      "🍲 Perfect for sauces, soups, marinades, sambal, and beverages"
+    ],
+    tips: [
+      "✅ For cooking: soak tamarind pulp in warm water 10–15 minutes, then strain for tamarind juice",
+      "✅ Store in an airtight container in a cool, dry place to preserve aroma",
+      "✅ For consistent taste in production, use measured tamarind extract/juice"
+    ],
+    availability: [
+      "Fresh / Pulp (seasonal depending on harvest)",
+      "Dried Tamarind",
+      "Seedless Tamarind (selected batches)",
+      "Tamarind Paste / Block (on request)",
+      "Tamarind Extract (on request)"
+    ]
+  }
   // benefits: [
   //   "🥬 Rich in vitamins C and K to support immunity and bone strength",
   //   "💪 High in fiber, promoting healthy digestion",
