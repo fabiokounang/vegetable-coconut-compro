@@ -103,7 +103,7 @@ const productDetails = {
   },
   tamarind: {
     category: "vegetable",
-    title: "Tamarind (Asam Jawa)",
+    title: "Tamarind",
     image: "images/image18.jpeg",
     gallery: [
       "images/image18.jpeg",
