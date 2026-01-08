@@ -169,6 +169,12 @@ h6 {
   }
 }
 
+@media (max-width: 460px) {
+  #header-company-name {
+    font-size: 1.2rem;
+  }
+}
+
 .whatsapp-float {
   position: fixed;
   width: 60px;
